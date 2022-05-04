@@ -1,0 +1,39 @@
+.button-link {
+  height: 48px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.button-link:link,
+.button-link:visited,
+.button-link:active {
+  color: #222222;
+}
+
+.button-link img {
+  margin-left: 4px;
+  position: relative;
+}
+
+.button-link:hover img {
+  animation-name: arrow-animation;
+  animation-duration: 1s;
+}
+
+@keyframes arrow-animation {
+  0% {
+    left: 0px;
+  }
+  25% {
+    left: -4px;
+  }
+  75% {
+    left: 4px;
+  }
+  100% {
+    left: 0px;
+  }
+}

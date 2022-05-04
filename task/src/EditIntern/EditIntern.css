@@ -1,0 +1,108 @@
+div.date-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.date-container > div {
+  width: calc(50% - 8px);
+}
+
+label {
+  font-weight: 500;
+  font-size: 18px;
+  display: block;
+}
+
+form > label,
+div.date-container,
+button {
+  margin-top: 40px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='date'] {
+  width: 100%;
+  height: 48px;
+  font-size: 18px;
+  border: 1px solid #222222;
+  padding: 0 16px;
+  position: relative;
+}
+
+input[type='date'],
+fieldset {
+  margin-top: 8px;
+}
+
+fieldset {
+  position: relative;
+  border-width: 0;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  background-image: url('../assets/date.svg');
+  cursor: pointer;
+  justify-self: start;
+  position: absolute;
+  right: 9px;
+}
+
+input[type='date']::before {
+  content: ' ';
+  width: 1px;
+  height: 100%;
+  background-color: #222222;
+  position: absolute;
+  top: 0;
+  right: 48px;
+}
+
+fieldset span.error-icon,
+input[type='date'].error::after {
+  content: url('../assets/error.svg');
+  height: 22px;
+}
+
+input[type='date'].error::after {
+  margin-right: 51px;
+}
+
+fieldset span.error-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+p.error-message {
+  margin-top: 8px;
+  color: #a3270c;
+}
+
+.error {
+  box-shadow: 0px 0px 0px 2px #a3270c;
+}
+
+input:focus {
+  box-shadow: 0px 0px 0px 2px #d3f2ff;
+}
+
+@media only screen and (max-width: 656px) {
+  div.date-container {
+    display: block;
+  }
+
+  div.date-container > div {
+    width: 100%;
+  }
+
+  div.date-container > div:last-child {
+    margin-top: 40px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,11 @@
+img.logo {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+}
+
+@media only screen and (max-width: 910px) {
+  img.logo {
+    display: none;
+  }
+}

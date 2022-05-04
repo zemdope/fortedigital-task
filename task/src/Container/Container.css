@@ -1,0 +1,30 @@
+.container {
+  max-width: 656px;
+  margin: 1px auto;
+  padding: 0.1px 0;
+  position: relative;
+}
+
+.inner-container {
+  width: 100%;
+  margin-top: 136px;
+  background-color: #f7f7f7;
+  padding: 40px 80px;
+}
+
+h1.form-title {
+  font-weight: 500;
+  font-size: 50px;
+}
+
+.navlink {
+  position: absolute;
+  left: 0;
+  top: 40px;
+}
+
+@media only screen and (max-width: 510px) {
+  .inner-container {
+    padding: 40px 20px;
+  }
+}
